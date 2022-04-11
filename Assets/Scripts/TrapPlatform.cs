@@ -2,25 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformCloud : MonoBehaviour
-{
-    //Переменная для силы прыжка
-    public float forceJump;
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        //Условие срабатывания прыжка
-        if (collision.relativeVelocity.y < 0)
-        {
-            //Прыжок дудла
-            DudelShef.instance.DudleRigid.velocity = Vector2.up * forceJump;
-        }       
-    }
-    //Перемещение скрытых платформ на вверх
+public class TrapPlatform : MonoBehaviour
+{    
     public void OnCollisionExit2D(Collision2D collision)
     {
-        //Условие перемещения платформ 
-        if (collision.collider.name == "DeadZone")
+        if (collision.collider.name == "DudelShef" )
         {
             //Случайная позиция платформы по Х
             float RandX = Random.Range(-1.7f, 1.7f);
@@ -34,4 +20,3 @@ public class PlatformCloud : MonoBehaviour
         }
     }
 }
-

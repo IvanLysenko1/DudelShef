@@ -39,8 +39,15 @@ public class DudelShef : MonoBehaviour
         }
         //Сила наклона
         DudleRigid.velocity = new Vector2(Input.acceleration.x * 10f, DudleRigid.velocity.y);
+
+        if (transform.position.x < -10)
+            transform.position = new Vector3(transform.position.x + 20f, transform.position.y, transform.position.z);
+        else if (transform.position.x > 10)
+            transform.position = new Vector3(transform.position.x - 20f, transform.position.y, transform.position.z);
+        
+
     }
-    //Смерть дудла
+    //Смерть и переход дудла
     public void OnCollisionEnter2D(Collision2D collision)
     {
         //Условие смерти дудла
@@ -49,5 +56,6 @@ public class DudelShef : MonoBehaviour
             //Перезапуск сцены
             SceneManager.LoadScene(0);
         }
+
     }
 }
