@@ -13,7 +13,7 @@ public class Pause : MonoBehaviour
         //При запуске сцены экран не активен
         pause.SetActive(false);
     }
-    //Для кнопки - CanvasScore(тап по экрану)
+    //Для кнопки - ButtonPause (тап по экрану)
     public void PauseOn()
     {
         //активация экрана паузы
