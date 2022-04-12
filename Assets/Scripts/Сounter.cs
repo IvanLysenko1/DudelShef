@@ -13,7 +13,7 @@ public class Сounter : MonoBehaviour
     public int ScoreCounter;
     void Start()
     {
-        //Условие для статичности  
+        //Условие для Static  
         if (instanceCount == null)
         {
             instanceCount = this;

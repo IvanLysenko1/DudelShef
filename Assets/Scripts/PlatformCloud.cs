@@ -9,7 +9,7 @@ public class PlatformCloud : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        //Условие срабатывания прыжка
+        //Условие срабатывания прыжка (только при падении вниз)
         if (collision.relativeVelocity.y < 0)
         {
             //Прыжок дудла
@@ -28,7 +28,7 @@ public class PlatformCloud : MonoBehaviour
             float RandY = Random.Range(transform.position.y + 20f, transform.position.y + 22f);
             //Позиция платформы новый вектор
             transform.position = new Vector3(RandX, RandY, 0);
-
+            //Накручиваем счетчик
             Сounter.instanceCount.ScoreCounter++;
 
         }

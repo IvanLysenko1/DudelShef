@@ -33,7 +33,7 @@ public class TrapPlatformCloud : MonoBehaviour
             float RandY = Random.Range(transform.position.y + 20f, transform.position.y + 22f);
             //Позиция платформы новый вектор
             transform.position = new Vector3(RandX, RandY, 0);
-
+            //Накручиваем счетчик
             Сounter.instanceCount.ScoreCounter++;
 
         }

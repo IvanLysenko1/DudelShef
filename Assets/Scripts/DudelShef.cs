@@ -13,7 +13,7 @@ public class DudelShef : MonoBehaviour
     public Rigidbody2D DudleRigid;
     void Start()
     {   
-        //Условие для статичности    
+        //Условие для Static    
         if (instance == null)
         {
             instance = this;
@@ -61,8 +61,8 @@ public class DudelShef : MonoBehaviour
         //Условие смерти дудла
         if (collision.collider.name == "DeadZone")
         {
-            //Перезапуск сцены
-            SceneManager.LoadScene(0);
+            //Возвращение в меню - закрытие сцены
+            SceneManager.LoadScene(1);
         }
 
     }
