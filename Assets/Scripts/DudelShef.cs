@@ -12,7 +12,8 @@ public class DudelShef : MonoBehaviour
     //переменная для тела дудла
     public Rigidbody2D DudleRigid;
     void Start()
-    {   //Условие для статичности    
+    {   
+        //Условие для статичности    
         if (instance == null)
         {
             instance = this;
@@ -39,12 +40,19 @@ public class DudelShef : MonoBehaviour
         }
         //Сила наклона
         DudleRigid.velocity = new Vector2(Input.acceleration.x * 10f, DudleRigid.velocity.y);
-
-        if (transform.position.x < -10)
-            transform.position = new Vector3(transform.position.x + 20f, transform.position.y, transform.position.z);
-        else if (transform.position.x > 10)
-            transform.position = new Vector3(transform.position.x - 20f, transform.position.y, transform.position.z);
-        
+        //Переход персонажа в противоположную сторону экрана при влете в бок экрана
+        //Условие при влете в левую сторону
+        if (transform.position.x < -3)
+        {
+            //Перенос вправо
+            transform.position = new Vector3(transform.position.x + 5.9f, transform.position.y, transform.position.z);
+        }
+        //Условие при влете в правую сторону
+        else if (transform.position.x > 3)
+        {
+            //перенос влево
+            transform.position = new Vector3(transform.position.x - 5.9f, transform.position.y, transform.position.z);
+        }
 
     }
     //Смерть и переход дудла

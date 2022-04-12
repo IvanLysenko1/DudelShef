@@ -23,7 +23,7 @@ public class PlatformCloud : MonoBehaviour
         if (collision.collider.name == "DeadZone")
         {
             //Случайная позиция платформы по Х
-            float RandX = Random.Range(-1.7f, 1.7f);
+            float RandX = Random.Range(-2.2f, 2.2f);
             //Случайная позиция платформы по Y с наращиванием от крайней сверху платформы
             float RandY = Random.Range(transform.position.y + 20f, transform.position.y + 22f);
             //Позиция платформы новый вектор

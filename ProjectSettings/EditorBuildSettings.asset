@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainMenuDudleShefScene.unity
+    guid: 7070c976a8dc3b64d9fca7723555aaa7
+  - enabled: 1
+    path: Assets/Scenes/DudleShefScene.unity
+    guid: eaf3953bc8f0e3642a98f8f4ade67aa2
   m_configObjects: {}
